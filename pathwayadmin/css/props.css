@@ -1,0 +1,157 @@
+/*body {
+	background-color: #003663;
+	background-image: url('/img/bg.gif');
+	background-repeat: repeat-x;
+	margin: 0px
+}
+
+body, tr, th {
+	font-family: Tahoma;
+	font-size: 11px;
+	text-align: left
+}
+
+.footer {
+	color: #99AFC1;
+	font-family: Tahoma;
+	font-size: 9px
+}*/
+
+.small {
+	font-size: 9px
+}
+
+IMG {
+	border: none
+}
+
+input, select, textarea {
+	font-family: Tahoma;
+	font-size: 11px
+}
+
+.slogan {
+	font-family: Verdana;
+	font-size: 9px
+}
+
+.slogan_white {
+	color: #FFFFFF;
+	font-family: Verdana;
+	font-size: 9px
+}
+
+.menu {
+	font-family: Verdana;
+	font-size: 9px
+}
+
+.subHeader {
+	color: #534741;
+	font-size: 9px
+}
+
+.subHeader_2 {
+	color: #534741
+}
+
+/*a:link, a:visited {
+	color: #4F7396;
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: underline
+}*/
+
+a.slogan:link, a.slogan:visited {
+	color: black;
+	text-decoration: underline
+}
+
+a.slogan:hover {
+	text-decoration: none
+}
+
+a.subHeader:link, a.subHeader:visited {
+	color: #534741
+}
+
+a.slogan_white:link, a.slogan_white:visited {
+	color: #FFFFFF
+}
+
+.left_col {
+	padding: 0px 5px 0px 10px;
+	width: 314px;
+	float: left;
+}
+
+.right_col {
+	padding: 0px 10px 0px 5px;
+	width: 315px;
+	float: left;
+}
+
+.cont {
+	padding-right: 9px;
+	padding-left: 9px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #CFCFCF;
+	border-left-color: #CFCFCF;
+}
+
+.top_cont {
+	font-size: 9px;
+	padding-bottom: 10px;
+}
+
+.bottom_cont {
+	color: #666666;
+	font-size: 12px;
+	padding-top: 9px;
+}
+
+.tnb_cont {
+	color: #666666;
+	font-size: 12px;
+}
+
+.bottom_cont b, .tnb_cont b {
+	color: #4F7396;
+}
+
+.right_nav {
+	background-color: #E5E5E5;
+	float: right;
+	width: 91px;
+	margin-right: 10px;
+}
+
+.caps {
+	font-size: 9px;
+	font-weight: bold;
+}
+
+.right_list {
+	text-align: right;
+	float: right;
+}
+
+.small b, .right_list b, .source, .source b {
+	color: #666666;
+}
+
+.props {
+	padding-bottom: 1px;
+	padding-left: 1px;
+}
+
+.props_2 {
+	padding-bottom: 1px;
+	padding-left: 1px;
+	padding-right: 1px;
+}

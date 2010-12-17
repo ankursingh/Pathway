@@ -1,0 +1,64 @@
+BODY {
+	FONT-SIZE: 11px; BACKGROUND: #c0c0c0; MARGIN: 0px; COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+BODY {
+	FONT-SIZE: 100%; BACKGROUND: #c0c0c0; MARGIN: 0px; COLOR: #000000; FONT-FAMILY: verdana, arial, helvetica, sans-serif
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 100%
+}
+LI.arrowdown {
+	MARGIN-TOP: 8px; LIST-STYLE-IMAGE: url(eg100002.gif);list-style:square; 
+}
+/*LI.arrowin {
+	MARGIN-TOP: 8px; LIST-STYLE-IMAGE: url(eg100001.gif); MARGIN-LEFT: 17px;list-style:square;
+}*/
+UL {
+	PADDING-LEFT: 5px; LIST-STYLE-IMAGE: url(eg100033.gif); MARGIN: 6px 0px -2px 12px
+}
+.maintable {
+	WIDTH: 769px; BACKGROUND-COLOR: #d6dacb
+}
+.topnavshell {
+	BACKGROUND-IMAGE: url(eg100004.gif)
+}
+.arrowRight {
+	FLOAT: right; MARGIN: 1px 10x 0px 5px
+}
+.mainside {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; VERTICAL-ALIGN: top; WIDTH: 176px; PADDING-TOP: 0px
+}
+.boxshellside {
+	MARGIN-TOP: 1px; MARGIN-BOTTOM: 0px; WIDTH: 172px
+}
+.boxshellmain {
+	MARGIN-TOP: 2px; MARGIN-BOTTOM: 0px; WIDTH: 413px
+}
+.boxcontent_wh {
+	BORDER-RIGHT: #003663 1px solid; PADDING-RIGHT: 6px; PADDING-LEFT: 6px; FONT-SIZE: 70%; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 6px; BORDER-LEFT: #003663 1px solid; PADDING-TOP: 6px; HEIGHT: 100%; BACKGROUND-COLOR: #ffffff
+}
+.boxsidebtm {
+	BACKGROUND-IMAGE: url(../images/menu/bottom.gif); MARGIN-BOTTOM: -6px; WIDTH: 172px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 18px
+}
+.boxcontent {
+	BORDER-RIGHT: #003663 1px solid; PADDING-RIGHT: 6px; PADDING-LEFT: 6px; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 6px; BORDER-LEFT: #003663 1px solid; PADDING-TOP: 6px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 100%; BACKGROUND-COLOR: #ffffff
+}
+.boxsmallhead {
+	BORDER-RIGHT: #003663 1px solid; PADDING-LEFT: 8px; FONT-WEIGHT: bold; FONT-SIZE: 12; BORDER-LEFT: #003663 1px solid; PADDING-TOP: 0px; BACKGROUND-COLOR: #fff
+}
+
+
+.formatText
+{
+	padding-top:6px;
+	padding-left:5px;
+	vertical-align:top;
+	width:10px;
+}
+
+.moduleHead {
+   font-family:Verdana, Arial, Helvetica, sans-serif;
+   font-size:11px;
+   font-weight:bold;
+   color: #104976;
+}

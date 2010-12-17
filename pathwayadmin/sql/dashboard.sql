@@ -1,0 +1,38 @@
+CREATE TABLE `tbl_dashboard_data` (
+`dash_id` INT NOT NULL AUTO_INCREMENT ,
+`inbound_calls_pos` INT( 5 ) NOT NULL ,
+`inbound_calls_bko` INT( 5 ) NOT NULL ,
+`inbound_calls_pinpad` INT( 5 ) NOT NULL ,
+`inbound_calls_wtbs` INT( 5 ) NOT NULL ,
+`inbound_calls_b_upgr` INT( 5 ) NOT NULL ,
+`inbound_calls_arl` INT( 5 ) NOT NULL ,
+`calls_abandoned_pos` INT( 3 ) NOT NULL ,
+`calls_abandoned_bko` INT( 3 ) NOT NULL ,
+`calls_abandoned_pinpad` INT( 3 ) NOT NULL ,
+`calls_abandoned_wtbs` INT( 3 ) NOT NULL ,
+`calls_abandoned_b_upgr` INT( 3 ) NOT NULL ,
+`calls_abandoned_arl` INT( 3 ) NOT NULL ,
+`asa_pos` CHAR( 5 ) NOT NULL ,
+`asa_bko` CHAR( 5 ) NOT NULL ,
+`asa_pinpad` CHAR( 5 ) NOT NULL ,
+`asa_wtbs` CHAR( 5 ) NOT NULL ,
+`asa_b_upgr` CHAR( 5 ) NOT NULL ,
+`asa_arl` CHAR( 5 ) NOT NULL ,
+`att_pos` CHAR( 5 ) NOT NULL ,
+`att_bko` CHAR( 5 ) NOT NULL ,
+`att_pinpad` CHAR( 5 ) NOT NULL ,
+`att_wtbs` CHAR( 5 ) NOT NULL ,
+`att_b_upgr` CHAR( 5 ) NOT NULL ,
+`att_arl` CHAR( 5 ) NOT NULL ,
+`sla_pos` CHAR( 5 ) NOT NULL ,
+`sla_bko` CHAR( 5 ) NOT NULL ,
+`sla_pinpad` CHAR( 5 ) NOT NULL ,
+`dashboard_status` CHAR( 1 ) DEFAULT 'N' NOT NULL ,
+`date` DATE NOT NULL ,
+PRIMARY KEY ( `dash_id` )
+) TYPE = MYISAM ;
+
+
+ALTER TABLE `tbl_dashboard_data` ADD `sla_wtbs` CHAR( 5 ) NOT NULL AFTER `sla_pinpad` ,
+ADD `sla_b_upgr` CHAR( 5 ) NOT NULL AFTER `sla_wtbs` ,
+ADD `sla_arl` CHAR( 5 ) NOT NULL AFTER `sla_b_upgr` ;

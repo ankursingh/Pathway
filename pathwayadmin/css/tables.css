@@ -1,0 +1,1340 @@
+/* CSS Document */
+
+table.stats 
+{
+	text-align: center;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif ;
+	font-weight: normal;
+	font-size: 11px;
+	color: #fff;
+	width: 280px;
+	background-color: #666;
+	border: 0px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+table.stats td 
+{
+	background-color: #CCC;
+	color: #000;
+	padding: 4px;
+	text-align: left;
+	border: 1px #2a7db5 solid;
+}
+
+table.stats td.hed
+{
+	background-color: #666;
+	color: #fff;
+	padding: 4px;
+	text-align: left;
+	border-bottom: 2px #2a7db5 solid;
+	font-size: 12px;
+	font-weight: bold;
+} 
+
+/* Table 1 end */
+
+table.contacts
+{ 
+	width: 580px;
+	background-color: #fafafa;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px; 
+}
+td.contactDept
+{ 
+	background-color: #99CCCC;
+	border: 1px #2a7db5 solid;
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 12px;
+	color: #404040; 
+}
+td.contact
+{ 
+	border-bottom: 1px #6699CC dotted;
+	text-align: left;
+	font-family: Verdana, sans-serif, Arial;
+	font-weight: normal;
+	font-size: .7em;
+	color: #404040;
+	background-color: #fafafa;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+	padding-right: 0px; 
+}
+
+/* Table 2 end */
+
+table.promoPlans
+{ 
+	width: 260px;
+	height: 170px;
+	background-color: #ffffff;
+	border: 2px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px; 
+}
+
+table.promoLarge
+{ 
+	width: 260px;
+	height: 350px;
+	background-color: #ffffff;
+	border: 2px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px; 
+}
+
+table.resiInternet
+{ 
+	width: 260px;
+	height: 200px;
+	background-color: #ffffff;
+	border: 2px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px; 
+}
+table.vsplan
+{ 
+	width: 180px;
+	height: 160px;
+	background-color: #ffffff;
+	border: 2px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px; 
+}
+
+table.promo
+{ 
+	width: 175px;
+	height: 405px;
+	background-color: #ffffff;
+	border: 2px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px; 
+}
+td.promoHead
+{ 
+	background-color: #2a7db5;	
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	color: #ffffff; 
+	font-weight:bold;	
+	text-align:center; 
+	padding:1px;
+	vertical-align:top
+}
+td.promoContent
+{ 
+	background-color: #ffffff;	
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	padding:8px;
+	vertical-align:top
+}
+td.promoLink
+{ 
+	background-color: #ffffff;	
+	text-align:center;
+	padding:5px;
+}
+td.promoImage
+{ 
+	background-color: #ffffff;
+	vertical-align:top;
+	
+}
+/* Table 3a - this table is end part of table Promo */
+table.dot
+{ 
+	width:95%;
+	border:0px;
+}
+td.dotline
+{ 
+	background-image:url(../images/dots_light.gif);
+	background-repeat:repeat-x;
+	height: 1px;
+}
+/* Table 3 end */
+
+/* Use this table for any comparison chart in site */
+
+table.form
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.formHead
+{
+	background-color: #a9ceec;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+} 
+td.formNormal
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+	width:20%;
+}
+td.formNormalCenter
+{
+	background-color: #ffffff;
+	text-align: center;
+	padding:6px;
+	border-spacing: 0px;
+	width:20%;
+}
+td.formNormalDark
+{
+	background-color: #E0E8F2;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+	width:20%;
+}
+td.formNormalCenterDark
+{
+	background-color: #E0E8F2;
+	text-align: center;
+	padding:6px;
+	border-spacing: 0px;
+	width:20%;
+}
+td.formFieldsSpacer
+{
+	background-color: #ffffff;
+	height: 7px;
+}
+td.formLineSeparator
+{
+	background-color: #2a7db5;
+	height: 1px;
+}
+
+/* Classes Used on Select Optional Services inner Table Starts here */
+table.formSignup
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.formHeadSignup
+{
+	background-color: #E1E8F4;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+} 
+td.formNormalSignup
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid;
+	border-spacing: 0px;
+	vertical-align:top;
+}
+/* Classes Used on Select Optional Services inner Table Ends here */
+
+/* Classes Used on Account & Billing Info inner Table Starts here */
+table.formSignupInnerBox
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #EBEFFA;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.formHeadSignupInnerBox
+{
+	background-color: #EBEFFA;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	padding-left:10px;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+} 
+td.formNormalSignupInnerBox
+{
+	text-align: left;
+	padding-left:10px;
+	border-spacing: 0px;
+	vertical-align:top;
+}
+td.formNormalSignupInnerBoxRight
+{
+	text-align: left;
+	border-spacing: 0px;
+	vertical-align:top;
+}
+/* Classes Used on Account & Billing Info inner Table Ends here */
+
+
+/* Use this table for any comparison chart in site */
+
+table.compare
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:96%;
+}
+td.compareHead
+{
+	background-color: #a9ceec;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+} 
+td.compareLeft
+{
+	background-color: #E0E8F2;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:30%;
+}
+td.compareNormal
+{
+	background-color: #ffffff;
+	text-align: center;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:20%;
+}
+td.compareNormalLeft
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:20%;
+}
+
+td.rdmsNormalLeft
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	vertical-align:top;
+}
+
+td.compareLeftCenter
+{
+	background-color: #E0E8F2;
+	text-align: center;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:30%;
+}
+
+td.globalPhoneFinder
+{
+	background-color: #a9ceec;
+	text-align: center;
+	padding:6px;
+	border-spacing: 0px;
+	width:30%;
+}
+
+table.globalPhoneFinder
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;	
+	background-color: #2a7db5;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:95%;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* Table compare end */
+
+table.arrow
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #ffffff;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.arrowLeft
+{
+	background-image:url(../images/arrow_left.gif);
+	background-repeat:no-repeat;
+	background-color:#2a7db5;
+	width:37px;
+}
+td.arrowNormal
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+}
+
+/* Table download */
+
+table.download
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #ffffff;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.downloadLeft
+{
+	background-color:#ffffff;
+	text-align: center;
+	width:37px;
+}
+td.downloadNormal
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+}
+
+
+/* Table fone */
+
+table.fone
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #ffffff;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.foneLeft
+{
+	background-image:url(../images/call.gif);
+	background-repeat:no-repeat;
+	background-color:#2a7db5;
+	width:37px;
+}
+td.foneNormal
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+}
+
+/* Table Acrobat */
+
+table.acrobat
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #ffffff;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.acrobatLeft
+{
+    text-align: center;
+	background-color:#2a7db5;
+	width:95px;
+	background-color: #ffffff;
+}
+td.acrobatNormal
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+}
+
+/* Table note */
+
+table.note
+{
+	background-color: #2a7db5;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+
+/* Use this table for Plans details chart in site */
+
+table.plans
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:90%;
+}
+td.plansHead
+{
+	background-color: #b2d7f3;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+} 
+td.plansNormal
+{
+	background-color: #ffffff;
+	text-align: center;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+td.plansBlue
+{
+	background-color: #dce9f9;
+	text-align: center;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+/* Table Plans end */
+
+/* Table Hosted PBX Start */
+table.hosted
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:95%;
+}
+td.hostedHead
+{
+	background-color: #b2d7f3;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border-spacing: 0px;
+} 
+td.hostedHeadLeft
+{
+	background-color: #b2d7f3;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border-spacing: 0px;
+} 
+
+td.hostedLeft
+{
+	background-color: #dce9f9;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+	width:30%;
+}
+
+td.hostedLeftCenter
+{
+	background-color: #dce9f9;
+	text-align: center;
+	padding:6px;
+	border-spacing: 0px;
+	width:30%;
+}
+
+td.hostedNormal
+{
+	background-color: #f3f3f3;
+	text-align: center;
+	padding:6px;
+	border-spacing: 0px;
+	width:20%;
+}
+td.hostedNormalLeft
+{
+	background-color: #f3f3f3;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+	width:20%;
+}
+td.hostedHead2
+{
+	background-color: #a9ceec;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+}
+
+td.hostedFeatures
+{
+	background-color: #dce9f9;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+	width: 453px;
+}
+td.hostedFeatures2
+{
+	background-color: #dce9f9;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+	width: 77px;
+}
+
+td.hostedFeaturesNormalLeft
+{
+	background-color: #f3f3f3;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+	width: 453px;
+}
+td.hostedFeaturesNormalLeft2
+{
+	background-color: #f3f3f3;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+	width: 77px;
+}
+
+td.hostedPlanLeft
+{
+	background-color: #E0E8F2;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:75%;
+	height:24px;
+}
+td.hostedPlanLeft2
+{
+	background-color: #E0E8F2;
+	text-align: left;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+td.hostedPlanNormal
+{
+	background-color: #dce9f9;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:75%;
+	height:24px;
+}
+td.hostedPlanNormal2
+{
+	background-color: #dce9f9;
+	text-align: left;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+td.hostedSavingsNormal
+{
+	background-color: #f3f3f3;
+	text-align: left;
+	padding:3px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+td.hostedSavingsLeft
+{
+	background-color: #dce9f9;
+	text-align: left;
+	padding:3px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+/* Table Hosted PBX End */
+
+/* Use this table for the User Guide section of the site */
+
+table.userGuide
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #e0e8f2;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+
+td.userGuideLeft
+{
+	background-color: #e0e8f2;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+	width:70%;
+	vertical-align:top
+}
+td.userGuideRight
+{
+	background-color: #e0e8f2;
+	text-align: center;
+	padding:6px;
+	border-spacing: 0px;
+	width:30%;
+	vertical-align:middle
+}
+
+/* Table Company => News*/
+table.news
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+table.news1
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:99%;
+}
+
+td.newsNormal
+{
+	background-color: #ffffff;
+	text-align: center;
+	padding:6px;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:10%;
+	vertical-align:middle
+}
+td.newsNormalLeft
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:45%;
+	vertical-align:middle
+}
+
+/* Table Company => SecureNet*/
+table.securenet
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+	height:156px;
+}
+
+td.securenetNormal
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:3px;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+	vertical-align:middle
+}
+
+/**** Signup Confirmation page classes ****/
+table.signupConfirm
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #CFDEED;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.signupConfirmHead
+{
+	background-color: #CFDEED;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:22px;
+	width:100%;
+}
+td.signupConfirmLeftCol
+{
+	background-color: #EEEFF1;
+	text-align: left;
+	padding:6px;
+	border-spacing: 0px;
+	width:40%;
+	height:22px;
+}
+td.signupConfirmRightCol
+{
+	background-color: #FFFFFF;
+	text-align: left;
+	padding:6px;
+	padding-left:10px;
+	border-spacing: 0px;
+	height:22px;
+}
+td.signupConfirmSeparator
+{
+	background-color: #EEEFF1;
+	padding:6px;
+	border-spacing: 0px;
+	height:10px;
+}
+td.signupConfirmLightSeparator
+{
+	background-color: #FFFFFF;
+	border-spacing: 0px;
+	height:5px;
+}
+td.signupConfirmDarkSeparator
+{
+	background-color: #CFDEED;
+	border-spacing: 0px;
+}
+td.signupConfirmPlanInfoHead
+{
+	background-color: #CFDEED;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:22px;
+	width:100%;
+}
+td.signupConfirmPlanInfoSubHeadLight
+{
+	background-color: #EEEFF1;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	padding-left:10;
+	padding-right:10;
+	border-bottom: 1px solid #2a7db5;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:30px;
+}
+td.signupConfirmPlanInfoSubHeadLightBottom
+{
+	background-color: #EEEFF1;
+	text-align: right;
+	font-size: 11px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:10px;
+	padding:5px;
+}
+td.signupConfirmPlanInfoSubHeadLightBottomCenter
+{
+	background-color: #EEEFF1;
+	text-align: center;
+	font-size: 11px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:10px;
+	padding-right:10px;
+}
+td.signupConfirmPlanInfoSubHeadDark
+{
+	background-color: #CFDEED;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	padding-left:10;
+	padding-right:10;
+	border-bottom: 1px solid #2a7db5;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:30px;
+}
+td.signupConfirmPlanInfoNormalLeft
+{
+	background-color: #FFFFFF;
+	text-align: left;
+	font-size: 11px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:10px;
+	padding:5px;
+}
+td.signupConfirmPlanInfoNormalCenter
+{
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 11px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:10px;
+}
+td.signupConfirmPlanInfoNormalDarkCenter
+{
+	background-color: #CFDEED;
+	text-align: center;
+	font-size: 11px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:10px;
+}
+td.signupConfirmPlanInfoDarkBottomCenter
+{
+	background-color: #CFDEED;
+	text-align: center;
+	font-size: 11px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:20px;
+}
+td.signupConfirmPlanInfoDarkBottomRight
+{
+	background-color: #CFDEED;
+	text-align: right;
+	font-size: 11px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	height:20px;
+	padding-right:10px;
+}
+
+/**** Class used on Signup - Order Confirmation page ****/
+table.signupConfirmOrder
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:60%;
+}
+td.signupConfirmOrderNormal
+{
+	background-color: #eaeffa;
+	text-align: center;
+	padding:10px;
+	border-spacing: 0px;
+}
+/**** Class used on Signup - Order Confirmation page "Smartreach" desc box ****/
+table.signupConfirmSmartReach
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:70%;
+}
+td.signupConfirmSmartReachNormal
+{
+	background-color: #FCF3DF;
+	text-align: left;
+	padding:5px;
+	border-spacing: 0px;
+	background-image:url(../images/sign_up/add_background.gif);
+	background-repeat:repeat-x;
+}
+
+/**** Spam Control ****/
+table.spam
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #e0e8f2;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:99%;
+	height:40;
+}
+
+table.spam1
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #e0e8f2;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:99%;
+}
+
+td.spam
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #e0e8f2;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:99%;
+}
+/**** highspeed image banner ****/
+
+td.hightspeedbanner
+{
+	background-color: #2a7db5;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #ffffff;	
+	height: 35px;
+}
+td.highpeednormalfont
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #2a7db5;	
+
+}
+
+table.rewardpins
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:50%;
+}
+
+td.rewardpinsNormal
+{
+	background-color: red;
+	text-align: center;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:20%;
+}
+td.rewardpinsNormalLeft
+{
+	background-color: red;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:20%;
+}
+
+/* Classes Used on Select Optional Services inner Table Starts here */
+table.formRewards
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.formHeadformRewards
+{
+	background-color: #a9ceec;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border: 1px #2a7db5 solid;
+	border-collapse: collapse;
+	border-spacing: 0px;
+} 
+td.formNormalformRewards
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid;
+	border-spacing: 0px;
+	vertical-align:top;
+}
+/* Classes Used on Select Optional Services inner Table Ends here */
+
+table.compare-table
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.compareLeft1
+{
+	background-color: #FFFFFF;
+	text-align: left;
+	padding-right:6px;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	
+}
+td.compareLeft2
+{
+	background-color: #FFFFFF;
+	text-align: left;
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:20%;
+}
+
+/* Use this table for any comparison chart in site */
+
+table.emailSetup
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:96%;
+}
+td.emailSetupHead
+{
+	background-color: #a9ceec;
+	text-align: left;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+} 
+td.emailSetupLeft
+{
+	background-color: #E0E8F2;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	padding-left: 30px;
+	width:80%;
+}
+td.emailSetupNormal
+{
+	background-color: #ffffff;
+	text-align: center;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:20%;
+}
+
+
+/* General Setup formatting */
+table.genSetup
+{
+	text-align: center;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;	
+	text-align:left;
+	background-color: #0e2757;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:100%;
+}
+td.genSetupHead
+{
+	background-color: #a9ceec;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+} 
+td.genSetupNormal
+{
+	background-color: #ffffff;
+	text-align: center;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:20%;
+}
+td.genSetupNormalLeft
+{
+	background-color: #ffffff;
+	text-align: left;
+	padding:6px;
+	border: 1px #2a7db5 solid; 
+	border-collapse: collapse;
+	border-spacing: 0px;
+	width:20%;
+}

@@ -1,0 +1,326 @@
+<?
+/*************************************************************************
+   Type         :   Script
+   File         :   php
+   Date         :   December 16, 2008
+   Author       :   Surinder Jangira
+   Environment  :   PHP, Apache, MySQL
+   Revisions    :
+   Project      :   Pathcom Website
+   File Name    :   general_setup.php
+   Purpose      :   This page deals with the display of the details related
+   					to Search Keywords.
+*************************************************************************/
+require_once("../includes/include_files.php");
+include_once "../classes/pathway_class.inc";
+
+$obj = new pathway_class;
+$obj1 = new pathway_class;
+
+
+//****************************************************************************
+// Declare Variables 
+//****************************************************************************
+
+if (!isset($_REQUEST['start']))
+	$_REQUEST['start']=0;
+
+if ($_REQUEST['start']<0)
+	$_REQUEST['start']=0;
+
+$limit=500;
+
+if (!isset($_REQUEST['submit1']))
+	$_REQUEST['submit1']="";
+	
+if ($_REQUEST['submit1']=="Set Default Article")
+{
+	$_REQUEST['start']=0;
+		
+	//$query="SELECT * FROM tbl_general_setup WHERE article_position='L'";
+	$query="SELECT * FROM tbl_general_setup";
+	$obj->query($query);
+	if ($obj->num_rows() > 0) {
+
+		if ($_REQUEST['articleMode']=="F") {
+			
+			$query="UPDATE tbl_general_setup SET article_state='".$_REQUEST['articleMode']."', news_article_id='".$_REQUEST['article_ID']."'";
+			//echo "1. $query";exit;
+			$obj1->query($query);
+		}
+		else if ($_REQUEST['articleMode']=="R") {
+			
+			$query="UPDATE tbl_general_setup SET article_state='".$_REQUEST['articleMode']."', news_article_id='0'";
+			//echo "2. $query";exit;
+			$obj1->query($query);
+		}
+	}
+	else {
+		
+		$query="INSERT INTO tbl_general_setup VALUES('', '".$_REQUEST['article_ID']."', '".$_REQUEST['articleMode']."')";
+		//echo $query;exit;
+		$obj1->query($query);
+	}?>
+	<script language="javascript">
+		alert("Record sucessfully modified.");
+	</script>
+<?}?>
+
+<SCRIPT language="javascript">
+
+function validateNewsArt(a)
+{
+	chk1=false;
+	chkbox1=-1;
+	
+	if (!document.general_setup.articleMode[0].checked && !document.general_setup.articleMode[1].checked) {
+		alert("Select any one Display Option");
+        document.general_setup.articleMode[0].focus();
+        return false;
+	}
+	
+	if (document.general_setup.articleMode[0].checked) {
+		
+		for(j=2;j<document.general_setup.elements.length;j++)
+		{
+			if (document.general_setup.elements[j].type=='radio')
+			{
+				if (chkbox1==-1)
+					chkbox1=j;
+				if (document.general_setup.elements[j].checked)
+					chk1=true;
+			}
+		}
+		if(!chk1)
+		{
+			alert("Please select an Article");
+			document.general_setup.elements[chkbox1].focus();
+			return chk1;
+		}
+	}
+	return true;
+}
+</SCRIPT>
+
+<table width="95%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="left" valign="top"><table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" valign="top"><img src="/images/innertab/tab_bg_01.gif" alt=""/></td>
+        <td align="left" valign="top" background="/images/innertab/tab_bg_02.gif" style="padding-top:5px" class="bodycontents"><b><?echo SEARCH_RESULTS_PATHWAY_COMMUNICATIONS?></b></td>
+        <td align="right" valign="top"><img src="/images/innertab/tab_bg_03.gif" alt="" /></td>
+      </tr>
+    </table></td>
+</tr>
+<tr>
+	<td background="/images/innertab/bg_03.gif" style="background-repeat:no-repeat; padding-left:10px">&nbsp;</td>
+</tr>
+<tr>
+	<td background="/images/innertab/bg_04.gif" style="background-repeat:repeat-y; padding-left:12px">
+	<!--page content here/-->
+	    <table width="95%" border="0" cellpadding="0" cellspacing="0">
+	    <tr>
+	    	<td align="left" valign="top" bgcolor="#FFFFFF" class="pagetitle">General Setup<br/>
+	    		<img src="<?echo TITLE_SEPERATOR_IMAGE?>"/>
+	    	</td>
+	    </tr>
+	    <tr>
+	    	<td height="15" bgcolor="#FFFFFF"></td>
+	    </tr>
+	    <tr>
+	    	<td align="left" valign="top" bgcolor="#FFFFFF" class="text">
+	    		<FORM name="general_setup" method="POST" action="general_setup.php">
+	    		
+	    		<?
+	    		if ($_REQUEST['columnType']=="L")
+	    			$sel1="checked";
+    			else 
+    				$sel1="";
+	    		if ($_REQUEST['columnType']=="R")
+	    			$sel2="checked";
+    			else 
+    				$sel2="";
+
+				$query1 = "SELECT * FROM tbl_general_setup";
+				//echo "<br>".$query1;
+				$obj1->query($query1);
+				if ($obj1->num_rows() > 0) {
+					$obj1->next_record();
+					$newsArticleID = $obj1->f('news_article_id');
+					$newsArticleMode = $obj1->f('article_state');
+					
+					if ($newsArticleMode=="F")
+						$sel1="checked";
+					else 
+						$sel1="";
+						
+					if ($newsArticleMode=="R")
+						$sel2="checked";
+					else 
+						$sel2="";
+				}?>
+				<br>
+				<table border=0 width="55%" cellpadding="0" cellspacing="0" align="left">
+				<tr>
+					<td class="bodycontents" style="padding-left:5px;"><b>Article Display Mode:</b></td>
+					<td class="bodycontents">
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+				    	<tr>
+				    		<td><input type="radio" name="articleMode" value="F" <?echo $sel1?>></td>
+				    		<td class="bodycontents"><b>Fixed</b></td>
+				    		<td class="bodycontents" width="5px;"></td>
+				    		<td><input type="radio" name="articleMode" value="R" <?echo $sel2?>></td>
+				    		<td class="bodycontents"><b>Random</b></td>
+			    		</tr>
+			    		</table>
+					</td>
+				</tr>
+				</table>
+				<br><br>
+				<table width='100%' border="0" align="center">
+				<tr>
+				    <td colspan="2"><img src="<?echo TITLE_SEPERATOR_IMAGE?>"/></td>
+				</tr>
+				<tr>
+				    <td colspan="2" height="5px"></td>
+				</tr>
+				</table>
+				
+				<?
+				
+				$query="SELECT * FROM tbl_news_article WHERE 1=1 AND (expiry_date='0000-00-00 00:00:00' OR expiry_date > now() ) AND news_article_flag='A' ";
+				$query=$query." order by news_article_id DESC";
+				//echo $query."<br>";
+				$obj->query($query);
+				
+				//****************************************************************************			
+				// Retrieve and initialize the total count of rows from the database.
+				//****************************************************************************
+				$tot=$obj->num_rows();
+				
+				//****************************************************************************
+				// Reset the value of Start if "Search" button is clicked. 
+				//****************************************************************************
+				if ($_REQUEST['submit1']=='Search')	
+					$_REQUEST['start']=0;
+					
+				//****************************************************************************
+				// Join and Execute Query
+				//****************************************************************************
+				$query= $query." Limit ".$_REQUEST['start'].", $limit";
+				$obj->query($query);
+				
+				//****************************************************************************
+				// If Recordset exists
+				//****************************************************************************
+				if ($obj->num_rows()>0)
+				{?>
+					
+				<table border=0 cellpadding=2 cellspacing=1 width="100%" align="center">
+				<tr bgcolor="White" class="bodycontents">
+				    <td>
+						Choose an Article that needs to be displayed as a default Article.
+					</td>
+				</tr>
+				</table>
+				
+					<table border=0 cellpadding=2 cellspacing=1 class="genSetup">
+					<tr class="bodycontents">
+						<td width='10%' class="genSetupHead"><b>Article ID</b></td>
+						<td width='35%' class="genSetupHead"><b>News Article Title</b></td>
+						<td width='50%' class="genSetupHead"><b>News Article Description</b></td>
+						<td width='5%'  class="genSetupHead"><b>Set Default</b></td>
+					</tr>
+					<?
+					//for($i=0,$j=0;$obj->next_record() && $j<$limit;$i++) {
+					
+					//****************************************************************************
+					// Iterate through the result set
+					//****************************************************************************
+					while($obj->next_record()) {
+				
+						$articleID=$obj->f('news_article_id');
+						$newsArticleTitle=trim($obj->f('news_article_title'));
+						$newsArticleDesc=trim($obj->f('news_article_desc'));
+						if ($newsArticleDesc!="") {
+				            $articleArr = explode(" ", $newsArticleDesc);
+				            $newsArticleDesc="";
+				            
+				            for ($i=0;$i <15; $i++) {
+				                $newsArticleDesc .= $articleArr[$i]." ";
+				            }
+				            if (sizeof($articleArr) > 15 )
+				                $newsArticleDesc.=" more...";
+						}
+						
+						if ($newsArticleID==$articleID)
+							$sel3="checked";
+						else 
+							$sel3="";
+						?>
+					<tr bgcolor="white">
+						<?echo "<td class='genSetupNormal'>".htmlentities($articleID)."</td>";
+						echo "<td class='genSetupNormalLeft'>$newsArticleTitle</td>";?>
+						<td class='genSetupNormalLeft'><?echo htmlentities($newsArticleDesc)?></td>
+						<td class='genSetupNormal'><input type='radio' name='article_ID' value='<?echo $articleID;?>' <?echo $sel3?>></td>
+					</tr>
+					<?}?>
+					</table>
+					</div>
+					<?
+					// Risticted only limited records per page
+					$prev=$_REQUEST['start']-$limit;
+					if ($prev<1)
+						$prev=0;
+					$next=$_REQUEST['start']+$limit;
+					if ($next>=$tot)
+						$next=0;
+				
+					echo "<table width='96%' cellspacing='0' cellpadding='0' border=0 align=left><tr>";
+					if ($_REQUEST['start']>0)
+						echo"<td align='left'><a href='general_setup.php?start=$prev'><b>Previous</b></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>";
+					else
+						echo"<td align='left'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>";
+					$start=$_REQUEST['start']+$limit;
+					if ($tot>$start)
+						echo"<td align='right'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='general_setup.php?start=$start'><b>Next</b></a></td></tr></table>";
+					else
+						echo"<td align='right'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>";
+					echo"</center><br>";?>
+				
+					<table align="left" width='96%' border=0>
+					<tr>
+						<td align="right">
+			                <table width='100%' align="center">
+			                <tr>
+			                    <td bgcolor="#e3e3e3" height="1px"></td>
+			                </tr>
+			                </table>
+			            </td>
+					</tr>
+					<tr>
+						<td align="right">
+			    			<center><input type="submit" name="submit1" value="Set Default Article" onClick="return validateNewsArt(this);">&nbsp;&nbsp;<input type="reset" value="Reset" name="reset"></center>
+						</td>
+					</tr>
+					</table>
+				<?}
+				else {
+					echo "<center><hr><i>No Records</i></center><hr>";
+				}
+				
+				?>
+				<input type="hidden" name="start" value="<?echo $_REQUEST['start'];?>">
+				</FORM>
+	    	</td>
+	    </tr>
+		<tr>
+			<td align="left" valign="top" bgcolor="#FFFFFF">&nbsp;</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td background="/images/innertab/bg_05.gif" style="background-repeat:no-repeat">&nbsp</td>
+</tr>        
+</table>

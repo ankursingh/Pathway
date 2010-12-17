@@ -1,0 +1,332 @@
+.bodytext{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+.bodyctext
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+}
+.tableheading{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	font-weight: bold;
+}
+.tabletext{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #0E2757;
+	font-weight: bold;
+}
+.textorange{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FF6603;
+	font-weight: bold;
+}
+.orangetitle{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #FF6603;
+	font-weight: bold;
+}
+h2{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	padding:0px;
+	margin:0px;
+}
+h1
+{font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	color: #3d5078; 
+	font-weight: bold;
+	}
+.highlight
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color: #003399;
+	text-align:left;	
+}
+.smalltestimonials
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	line-height: 1.4;
+	text-align:left;
+}
+acronym 
+{
+	border-bottom: 0px dotted black;
+	cursor:default;
+}
+.FooterLink
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: none;
+	color: #FFFFFF;
+}	
+a.FooterLink:link  
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a.FooterLink:visited 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: none;
+	color: #ffffff;
+}
+a.FooterLink:hover 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: none;
+	color: #ffffff;
+}
+a
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: none;
+	color: #0E2757;
+}	
+a.link  
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: none;
+	color: #0E2757;
+}
+a.visited 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: none;
+	color: #0E2757;
+}
+a.hover 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: none;
+	color: #0E2757;
+}
+
+
+a.services_contents:link  
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a.services_contents:visited 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: none;
+	color: #ffffff;
+}
+a.services_contents:hover 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+
+.bodycontents
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-align:left;
+}
+P
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-align:left;
+}
+.homepage_contents
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-align:left;
+	line-height: 1.6;
+}
+.services_contents
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #FFFFFF;
+	text-align:left;
+	line-height: 1.2;	
+}
+.bodycontents_small
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;		
+}
+.slogan
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	color: #FFFFFF;		
+}
+.small_heading
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color: #0e2757;
+	text-align:center;		
+}
+
+.srTitle 
+{
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	color: #3d5078; 
+	font-weight: bold;
+
+}
+
+.blueMenuHeader 
+{
+	background-color: #bbcbed;
+	border-top: solid #29597b 1px;
+	border-bottom: solid #29597b 1px;
+	border-left: solid #29597b 1px;
+}
+
+.blueMenuHeaderText 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #020e23; 
+	font-weight: bold;
+}
+
+a.blueMenuHeaderText.link 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #020e23; 
+	font-weight: bold;
+}
+
+a.blueMenuHeaderText.visited 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #020e23; 
+	font-weight: bold;
+}
+
+a.blueMenuHeaderText.hover
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #020e23; 
+	font-weight: bold;
+}
+.page_subheading
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	color: #0e2757;
+	text-align:left;
+}
+.page_heading
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color: #0e2757;
+	text-align:center;		
+}
+
+img
+{
+border:0;
+}
+image
+{
+border:0;
+}
+.inputboxsmall
+{
+	HEIGHT:20px;
+	BORDER-TOP:1px solid #29597B;
+	BORDER-LEFT:1px solid #29597B;
+	BORDER-BOTTOM:1px solid #29597B;
+	BORDER-RIGHT:1px solid #29597B;
+	FONT : normal 9px Verdana, Arial, Helvetica, sans-serif;
+	COLOR:#808080;
+	background: #FFFFE6;
+}
+.inputbox
+{
+	HEIGHT:20px;
+	BORDER-TOP:1px solid #29597B;
+	BORDER-LEFT:1px solid #29597B;
+	BORDER-BOTTOM:1px solid #29597B;
+	BORDER-RIGHT:1px solid #29597B;
+	FONT : normal 12px Verdana, Arial, Helvetica, sans-serif;
+	background: #FFFFE6;
+}
+.searchbox
+{
+	HEIGHT:20px;
+	BORDER-TOP:1px solid #29597B;
+	BORDER-LEFT:1px solid #29597B;
+	BORDER-BOTTOM:1px solid #29597B;
+	BORDER-RIGHT:1px solid #29597B;
+	FONT : normal 11px Verdana, Arial, Helvetica, sans-serif;
+}
+.submit 
+{
+color: #2b333c;
+background: #fefefe;
+border: 3px double;
+border-color: #c4cccc #acb5b5 #6f7777 #acb5b5;
+height:21px;
+width:100px;
+font-weight:bold;
+font-size:85%;
+}
+li
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	text-align:left;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+.page_body {
+	position:relative;	
+	background-color:#ffffff;
+}

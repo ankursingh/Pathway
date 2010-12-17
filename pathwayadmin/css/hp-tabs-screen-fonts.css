@@ -1,0 +1,8 @@
+/*	$Id: hp-tabs-screen-fonts.css,v 1.1 2009/07/09 14:58:10 webdev Exp $ */
+
+div#ibm-home-tasks {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:0.74em;
+}
+ul#ibm-home-task-nav li a {font-weight:bold;}
+div#ibm-home-tasks div.ibm-column h3 {font-size:1em;}
