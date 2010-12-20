@@ -51,11 +51,11 @@
                                 while ($service = mysql_fetch_array($service_data)) {
                             ?>
                                     <tr bgcolor="white">
-                                        <td colspan="3" valign="top">
+                                        <td colspan="3" valign="top" style="padding-left: 5px">
                                             <img src="/images/service_images/<?php echo $service['image']; ?>" height="30px" width="30px">&nbsp;&nbsp;&nbsp;&nbsp;
                                         <strong> <?php echo $service['name']; ?></strong>
                                         </td>
-                                        <td colspan="2">
+                                        <td colspan="2"style=" padding-left: 5px">
                                                 
                                         </td>
                                     </tr>
@@ -65,8 +65,8 @@
                                     while ($row1 = mysql_fetch_array($attribute_data)) {
                                         
                             ?><tr bgcolor="white">
-                                            <td align ="left" colspan="3" align="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $row1['name']; ?>&nbsp;&nbsp;&nbsp;</td>
-                                            <td align="left" colspan="2">
+                                            <td align ="left" colspan="3" style="padding-left: 5px" align="middle">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $row1['name']; ?>&nbsp;&nbsp;&nbsp;</td>
+                                            <td align="left" colspan="2" style="padding-left: 5px">
                                             <img src="/images/service_images/<?php echo $row1['image_flag'] . ".png" ?>" height="16px" width="16px">
                                             &nbsp;&nbsp;&nbsp; <?php echo $row1['status']; ?></td>
                                         </tr>

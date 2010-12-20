@@ -1,4 +1,7 @@
-<?php 
+<?php
+        $error=false;
+        $not_avail=false;
+        $avail= "checked";
 if($action == 'edit'){
     if($id != null){
         $attribute_data = $obj->query("SELECT * FROM services_attribute WHERE id='$id' LIMIT 1");
@@ -6,10 +9,20 @@ if($action == 'edit'){
         $attr_name = $field_data['name'];
         $status = $field_data['status'];
         $active = $field_data['is_active'];
+        $image = $field_data['image_flag'];
         if($active == 1){
             $active_true = "checked";
         }else{
             $active_false = "checked";
+        }
+        $avail=false;
+        switch($image){
+            case 1: $error = "checked";
+                break;
+            case 2: $avail = "checked";
+                break;
+            case 4: $not_avail = "checked";
+                break;
         }
 
     }
@@ -92,25 +105,23 @@ if($action == 'edit'){
                                         <input type="text" maxlength="70" name="attribute_name" id="service_name" value="<?php echo $attr_name; ?>">
                                     </td>
                                 </tr>
-                                 <tr>
+                                 <tr >
                                     <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
                                         Status
                                     </td>
                                     <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
-                                        <input type="text" maxlength="70" name="attribute_status" id="attribute_status" value="<?php echo $status; ?>">
+                                        <textarea name="attribute_status" id="attribute_status"  cols="30" rows="6"><?php echo $status; ?></textarea>
+                                       
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
+                                    <td align="left" valign="top" bgcolor="#FFFFFF" class ="text">
                                         Image Flag
                                     </td>
-                                    <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
-                                        <select name="image_flag" value="<?php echo $image_flag; ?>">
-                                            <option  value ="3">Available</option>
-                                            <option  value ="2">Upcoming</option>
-                                            <option value ="1"> Not Clear </option>
-                                            <option  value ="4">Not Available</option>
-                                        </select>
+                                    <td align="left" valign="top" bgcolor="#FFFFFF" class ="text">
+                                        <input type="radio" <?php  echo $avail; ?> value ="2" name="image_flag"> <img src="/images/service_images/2.png" height="20px" width="20px"> Available
+                                         <input type="radio" value ="4" <?php echo $not_avail; ?> name="image_flag"> <img src="/images/service_images/4.png" height="20px" width="20px"> Not Available
+                                         <input type="radio" value ="1" <?php echo $error; ?> name="image_flag"> <img src="/images/service_images/1.png" height="20px" width="20px"> Error
                                     </td>
                                 </tr>
                                 <tr>
