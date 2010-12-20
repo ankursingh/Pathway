@@ -1,4 +1,3 @@
-<?php $id = 1; ?>
 <table width="95%" border="0" cellpadding="0" cellspacing="0">
     <tr>
         <td align="left" valign="top"><table border="0" cellspacing="0" cellpadding="0">
@@ -49,7 +48,7 @@
                             $categories = $obj->query($sql_query);
                             $i = 1;
                             while ($row = mysql_fetch_array($categories)) {
-                            print_r($row);
+                            //print_r($row);
                                 ?>
                                 <tr bgcolor="white">
                                     <td align="center">
@@ -72,8 +71,19 @@
                                 }
                             ?>
                         </table>
-                    </td>
+                <tr>
+                    <td bgcolor="#ffffff" align="left" valign="top">&nbsp;</td>
                 </tr>
+
+                <tr>
+                    <td bgcolor="#ffffff" align="left" valign="top" >&nbsp;</td>
+                </tr>
+
             </table>
+
+        </td>
+    </tr>
+    <tr>
+        <td background="/images/innertab/bg_05.gif" style="background-repeat: no-repeat;">&nbsp;</td>
     </tr>
 </table>

@@ -16,8 +16,7 @@ include_once "./classes/pathway_class.inc";
 
 $obj = new pathway_class;
 $obj1 = new pathway_class;
-
-extract($_GET);
+$obj2 = new pathway_class;
 if ($_REQUEST['condition']=='Modify')
 	$submitname="Update";
 else
@@ -93,7 +92,7 @@ select
                     <td width="75%" align="left" valign="top" style="padding-top:3">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
-                        <td align="left" valign="top"><?php require_once('./middle/attribute_middle.php'); ?></td>
+                        <td align="left" valign="top"><?php require_once('./middle/service_view_middle.php'); ?></td>
                         </tr>
                         </table>
                     </td>

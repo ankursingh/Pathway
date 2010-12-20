@@ -1,3 +1,4 @@
+<!--Actually it is left menu previous coder got confused between right and left and he wasn't right -->
 <table cellspacing="0" cellpadding="0" border="0">
 <tbody>
 <tr>
@@ -82,6 +83,17 @@
 						<li class="arrowin"><a href="./modify_city.php?condition=Delete" class="columnnav"><b>Delete City Data</b></a></li>
 					</ul>
 				</div>
+                            <div id="dashboard7">
+					<ul>
+						<li class="arrow"><span class="moduleHead">Manage Service</span></li>
+					</ul>
+				</div>
+                            <div id="dashboard_submenu8">
+                                <ul>
+						<li class="arrowin"><a href="./service_category.php" class="columnnav"><b>View All catgories</b></a></li>
+						<li class="arrowin"><a href="./service_modify.php?action=add" class="columnnav"><b>Add New Service</b></a></li>
+					</ul>
+                            </div>
 			</div>	
 			
 			<!--end boxcontent_yourgov-->

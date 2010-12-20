@@ -5,12 +5,24 @@ if ($action == 'edit') {
     $category_id = $row['category_id'];
     $service_name = $row['name'];
     $active = $row['is_active'];
+    $image = $row['image'];
 } else {
     $category_id = "";
     $service_name = "";
     $active = "";
 }
 ?>
+<script>
+    function validate(){
+        check = true;
+        var name = document.getElementById('service_name');
+        if(name.value.length == 0){
+            alert('Please enter service name');
+            check = false;
+        }
+        return check;
+    }
+</script>
 <table width="95%" border="0" cellpadding="0" cellspacing="0">
     <tr>
         <td align="left" valign="top"><table border="0" cellspacing="0" cellpadding="0">
@@ -28,7 +40,7 @@ if ($action == 'edit') {
         <td background="/images/innertab/bg_04.gif" style="background-repeat:repeat-y; padding-left:12px">
             <!--page content here/-->
             <table width="95%" border="0" cellpadding="0" cellspacing="0" color="#000000">
-                <form id="service_edit" enctype="multipart/form-data" method="post" action="">
+                <form id="service_edit" enctype="multipart/form-data" method="post" action="" onsubmit ="javascript:return validate();">
                     <?php if ($action == 'edit') {
                     ?><input type = "hidden" name="id" value="<?php echo $id; ?>"><?php
                     }
@@ -38,6 +50,23 @@ if ($action == 'edit') {
                     <tr>
                         <td align="left" valign="top" bgcolor="#FFFFFF" class="text"></td>
                     </tr>
+                    <?php
+                    if (isset($error)) {
+                        if ($error != 0) {
+                    ?><tr>
+                                <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
+                            <?php
+                            if ($error == 1) {
+                                echo "Please Fill Your name";
+                            }
+                            if ($error == 2) {
+                                echo "Please attach relevant image";
+                            }
+                            ?></td>
+                    </tr>
+                    <?php
+                        }
+                    } ?>
                     <tr>
                         <td>
                             <table border=0 cellpadding=2 cellspacing=1 class="compare">
@@ -45,7 +74,7 @@ if ($action == 'edit') {
                                     <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
                                         Category:
                                     </td>
-                                    <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
+                                    <td align="left" valign="top" bgcolor="#FFFFFF" class="text" font-color="red">
                                         <select name="category_id" value="<?php echo $category_id; ?>">
                                             <?php
                                             $category_query = "SELECT * FROM service_category";
@@ -63,7 +92,7 @@ if ($action == 'edit') {
                                         Service name
                                     </td>
                                     <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
-                                        <input type="text" maxlength="70" name="service_name" id="service_name" value="<?php echo $service_name;?>" >
+                                        <input type="text" maxlength="70" name="service_name" id="service_name" value="<?php echo $service_name; ?>" >
                                     </td>
                                 </tr>
                                 <tr>
@@ -75,21 +104,26 @@ if ($action == 'edit') {
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
-                                        Active
-                                    </td>
-                                    <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
-                                        &nbsp; <input type="radio" checked value="1" name="active"> &nbsp; Yes
-                                        &nbsp;<input type="radio" value="0" name="active">&nbsp; No
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
-                                        &nbsp;
-                                    </td>
-                                    <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
-                                        <input type="submit" value="<?php echo $action; ?>" title="Add Service data" name="submit">&nbsp;&nbsp;&nbsp;&nbsp;
+                                <?php if ($action == 'edit') {
+ ?>
+
+<?php } ?>
+
+                                            <tr>
+                                                <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
+                                                    Active
+                                                </td>
+                                                <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
+                                                    &nbsp; <input type="radio" checked value="1" name="active"> &nbsp; Yes
+                                                    &nbsp;<input type="radio" value="0" name="active">&nbsp; No
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
+                                                    &nbsp;
+                                                </td>
+                                                <td align="left" valign="top" bgcolor="#FFFFFF" class="text">
+                                                    <input type="submit" value="<?php echo $action; ?>" title="Add Service data" name="submit">&nbsp;&nbsp;&nbsp;&nbsp;
                                         <a onclick="javascript:history.go(-1);" title="cancel" href ="javascript:void(0)">Cancel</a>
                                     </td>
                                 </tr>
@@ -99,8 +133,20 @@ if ($action == 'edit') {
                                 </tr>
                             </table>
                 </form>
-            </table>
-        </td>
 
+                <tr>
+                    <td bgcolor="#ffffff" align="left" valign="top">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td bgcolor="#ffffff" align="left" valign="top" >&nbsp;</td>
+                </tr>
+
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <td background="/images/innertab/bg_05.gif" style="background-repeat: no-repeat;">&nbsp;</td>
     </tr>
 </table>

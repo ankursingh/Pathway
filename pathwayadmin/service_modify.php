@@ -16,6 +16,39 @@ include_once "./classes/pathway_class.inc";
 extract($_GET);
 $obj = new pathway_class;
 $obj1 = new pathway_class;
+if (isset($order)) {
+    $in_loop = 0;
+    if ($order == up) {
+        $sql_query = "SELECT * FROM service WHERE category_id = '$category_id' ORDER by service.order DESC";
+        $in_loop = 1;
+    }
+    if ($order == down) {
+        $sql_query = "SELECT * FROM service WHERE category_id = '$category_id' ORDER by service.order ASC";
+        $in_loop = 1;
+    }
+    if ($in_loop) {
+        $service_data = $obj->query($sql_query);
+        $next = false;
+        while ($row = mysql_fetch_array($service_data)) {
+
+            if ($next == true) {
+                $second_data = $row;
+                $next = false;
+            }
+            if ($row['id'] == $id) {
+                $first_data = $row;
+                $next = true;
+            }
+        }
+        if (!empty($second_data)) {
+            $first_query = "UPDATE service SET service.order = '$second_data[order]' WHERE id='$first_data[id]'";
+            $obj->query($first_query);
+            $second_query = "UPDATE service SET service.order = '$first_data[order]' WHERE id='$second_data[id]'";
+            $obj->query($second_query);
+        }
+    }
+    header("location: service.php?category_id=$category_id");
+}
 
 function checkTypeAndUploadFile($file) {
     $acceptable_file_type = array('image/jpeg', 'image/gif', 'image/png', 'image/bmp');
@@ -50,12 +83,31 @@ function checkAvailibilityElseRenameFile($filename, $ext) {
         $addition = "_" . $ext;
 
         if (($newname_length == 1) || ((preg_match("/['0-9']/", $checkUnderScore[($newname_length - 1)])) == 0)) {
-            $newname = $file_name[$array_length - 2] . $addition . "." . $file_name[($array_length - 1)];
+            $extension = $file_name[$array_length - 1];
+            //$newname = $file_name[$array_length - 2] . $addition . "." . $file_name[($array_length - 1)];
+            $file_name[$array_length-1] = $addition;
+            $file_name[$array_length] = ".";
+            $file_name[$array_length+1] = $extension;
+            $newname = implode("", $file_name);
+            //print_r($data);
+            echo "hello";
+
         } else {
-            $newname = $checkUnderScore[($newname_length - 2)] . $addition . "." . $file_name[($array_length - 1)];
+             $extension = $file_name[$array_length - 1];
+            //$newname = $checkUnderScore[($newname_length - 2)] . $addition . "." . $file_name[($array_length - 1)];
+            /*$file_name[$array_length-1] = $addition;
+            $file_name[$array_length] = ".";
+            $file_name[$array_length+1] = $extension;
+            $newname = implode("", $file_name);
+           echo "!hello"; */
+             $extension = $file_name[$array_length-1];
+             $checkUnderScore[$newname_length-1]= $addition;
+             $checkUnderScore[$newname_length] = ".";
+             $checkUnderScore[$newname_length+1] = $file_name[$array_length-1];
+             $newname = implode("",$checkUnderScore);
             //echo $newname;
         }
-
+        
         $ext++;
         $newname = checkAvailibilityElseRenameFile($newname, $ext);
 
@@ -66,39 +118,58 @@ function checkAvailibilityElseRenameFile($filename, $ext) {
 }
 
 if (isset($_POST['submit'])) {
-    echo $submit;
+    //echo $submit;
     extract($_POST);
     extract($_FILES);
     if ($submit == "edit") {
-
-        $sql = "UPDATE service SET name='$service_name',category_id ='$category_id',is_active = '$active'  WHERE id = '$id'";
-        $check = $obj->query($sql);
-        if ($image != null) {
-            $image_status = checkTypeAndUploadFile($image);
-            $sql = "UPDATE service SET image='$image_status' WHERE id='$id'";
-            $obj->query($sql);
+        $error = 0;
+        if ($service_name == null) {
+            $error = 1;
         }
+        if ($error == 0) {
+            $sql = "UPDATE service SET name='$service_name',category_id ='$category_id',is_active = '$active'  WHERE id = '$id'";
+            $check = $obj->query($sql);
+            if ($image != null) {
+                $image_status = checkTypeAndUploadFile($image);
+                $sql = "UPDATE service SET image='$image_status' WHERE id='$id'";
+                $obj->query($sql);
+            }
 
-        if ($check) {
-            header('location: service.php');
-        } else {
-            echo "data can not be saved right now";
+            if ($check) {
+                header("location: service.php?category_id=$category_id");
+            } else {
+                echo "data can not be saved right now";
+            }
         }
     }
     if ($submit == 'add') {
 
+        $error = 0;
+        if ($service_name == null) {
+            $error = 1;
+        }
+        if ($image['name'] == null) {
+            $error = 2;
+        }
+        if ($error == 0) {
             $image_status = checkTypeAndUploadFile($image);
-        
-        if ($image_status) {
-            $sql = "INSERT into service (category_id,name,image,is_active) VALUES('$category_id','$service_name','$image_status','$active')";
-            $check = $obj->query($sql);
-            if ($check) {
-                //header('location: service.php');
+
+            if ($image_status) {
+                $order_query = $obj->query("SELECT * FROM service WHERE category_id ='$category_id' ORDER by service.order DESC");
+                $last_order_number = mysql_fetch_array($order_query);
+                $order = $last_order_number['order'] + 1;
+                $sql = "INSERT into service (category_id,service.order,name,image,is_active) VALUES('$category_id','$order','$service_name','$image_status','$active')";
+                $check = $obj->query($sql);
+                if ($check) {
+                    header("location: service.php?category_id=$category_id");
+                } else {
+                    echo "data can not be saved right now";
+                }
             } else {
-                echo "data can not be saved right now";
+                echo "Image can not be uploaded";
             }
         } else {
-            echo "Image can not be uploaded";
+            $action = 'add';
         }
     }
 }

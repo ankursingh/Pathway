@@ -1,3 +1,14 @@
+<script>
+    function validate(){
+        check = true;
+        var name = document.getElementById('service_name');
+        if(name.value.length == 0){
+            alert('Please enter category name');
+            check = false;
+        }
+        return check;
+    }
+</script>
 <table width="95%" border="0" cellpadding="0" cellspacing="0">
     <tr>
         <td align="left" valign="top"><table border="0" cellspacing="0" cellpadding="0">
@@ -15,7 +26,7 @@
         <td background="/images/innertab/bg_04.gif" style="background-repeat:repeat-y; padding-left:12px">
             <!--page content here/-->
             <table width="95%" border="0" cellpadding="0" cellspacing="0" color="#000000">
-                <form id="form_edit" method="post" action="">
+                <form id="form_edit" method="post" action="" onsubmit="javascript:return validate();">
                     <?php
                     if($action == edit){
                     ?><input type="hidden" name ="id" value="<?php echo $id;?>"> <?php

@@ -43,6 +43,7 @@ if (isset($_POST['submit'])) {
 }
 if ($action == 'delete') {
     if ($id != null) {
+        
         $query = "DELETE  service.* ,service_category.*,services_attribute.* FROM service_category LEFT JOIN service ON service.category_id = $id LEFT JOIN services_attribute ON services_attribute.category_id = $id WHERE service_category.id = $id";
 
         $check = $obj->query($query);
