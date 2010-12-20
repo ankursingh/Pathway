@@ -56,6 +56,7 @@
 
                             $services = $obj->query($sql_query);
                             $i = 1;
+                            $total = mysql_num_rows($services);
                             while ($row = mysql_fetch_array($services)) {
 
                                 // print_r($row);
@@ -67,15 +68,25 @@
                                 <td style="padding-left: 5px" align="center">
                                     <?php echo $row['name']; ?>
                                 </td>
-                                <td style="padding-left: 5px" align="center">
+                                <td style="padding-left: 5px" align="center" nowrap>
+                                    <?php if($i != 1 ){?>
                                     <a href="service_modify.php?order=up&id=<?php echo $row['id']; ?>&category_id=<?php echo $category_id; ?>">Up</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <?php }else{
+                                        echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                                    }
+                                    if($i != $total){
+                                    ?>
                                     <a href="service_modify.php?order=down&id=<?php echo $row['id']; ?>&category_id=<?php echo $category_id; ?>">Down</a>
+                                    <?php }else{
+                                        echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                                    }
+                                        ?>
                                 </td>
-                                <td style="padding-left: 5px"align="center">
-                                    <a href="service_modify.php?action=edit&id=<?php echo $row['id']; ?>">Edit</a>
-                                    &nbsp;&nbsp;||&nbsp;&nbsp;
+                                <td style="padding-left: 5px"align="center" nowrap>
+                                     <a href="service_modify.php?action=edit&id=<?php echo $row['id']; ?>">Edit</a>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
                                     <a href="service_modify.php?action=delete&id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this Category');">Delete</a>
-                                    &nbsp;&nbsp;||&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
                                     <a href="attribute_service.php?id=<?php echo $row['id']; ?>">Attributes</a>
                                 </td>
                             </tr>

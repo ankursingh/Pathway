@@ -60,9 +60,9 @@
 
                                 <td style="padding-left: 5px"align="center">
                                     <a href="modify_category.php?action=edit&id=<?php echo $row['id']; ?>">Edit</a>
-                                    &nbsp;&nbsp;||&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
                                     <a href="modify_category.php?action=delete&id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure you want to delete this Category');">Delete</a>
-                                    &nbsp;&nbsp;||&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;
                                     <a href="service.php?category_id=<?php echo $row['id']; ?>">Services</a>
                                 </td>
                             </tr>
